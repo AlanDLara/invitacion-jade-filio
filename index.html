@@ -9,37 +9,35 @@
       margin: 0;
       font-family: 'Times New Roman', serif;
       font-style: italic;
-      background: url("img/fondo.jpg") repeat; /* tu archivo descargado */
-      background-size: cover;
+      /* Fondo ornamental tipo papel tapiz */
+      background: url("img/fondo.jpg") repeat;
       background-attachment: fixed;
       color: #4a3b39;
       animation: fadeIn 2s ease-in;
     }
+
     header {
-      background-color: rgba(212, 175, 55, 0.9); /* dorado con transparencia */
+      background-color: rgba(212, 175, 55, 0.9); /* dorado con ligera transparencia */
       color: white;
       text-align: center;
       padding: 3rem 1rem;
       font-family: 'Times New Roman', serif;
       font-style: italic;
     }
-    header h1 {
-      font-size: 3.5rem;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.5rem;
-      margin-top: 0.5rem;
-    }
+    header h1 { font-size: 3.5rem; margin: 0; }
+    header p { font-size: 1.5rem; margin-top: 0.5rem; }
+
+    /* Cajas sobre el fondo para legibilidad */
     section {
       padding: 2rem;
       text-align: center;
-      background-color: rgba(255, 248, 220, 0.85); /* caja suave encima del fondo */
+      background-color: rgba(255, 248, 220, 0.85); /* marfil translúcido */
       margin: 2rem auto;
       border-radius: 1rem;
       max-width: 900px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
+
     .imagen {
       width: 80%;
       max-width: 600px;
@@ -48,37 +46,117 @@
       border-radius: 1rem;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
-    .frase {
-      font-size: 2rem;
-      margin: 1rem 0;
-    }
-    .countdown {
-      font-size: 3rem;
-      font-weight: bold;
-      margin: 2rem 0;
-    }
+
+    .frase { font-size: 2rem; margin: 1rem 0; }
+    .countdown { font-size: 3rem; font-weight: bold; margin: 2rem 0; }
+
     .music-control {
-      margin: 1rem;
-      padding: 0.5rem 1rem;
+      margin: 1rem auto 0;
+      display: block;
+      padding: 0.6rem 1.2rem;
       font-size: 1rem;
       background-color: #d4af37;
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
+    .music-control:hover { filter: brightness(1.05); }
+
     footer {
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
       color: #333;
       background-color: rgba(255, 248, 220, 0.9);
-      margin-top: 2rem;
+      margin: 2rem auto 0;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
   </style>
 </head>
 <body>
+  <!-- Música de fondo con control -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="music/This Will Be.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+  <button class="music-control" onclick="toggleMusic()">Pausar/Reproducir música</button>
+
+  <header>
+    <h1>Mis XV LUNA D' JADE</h1>
+    <p>Jade Filio</p>
+  </header>
+
+  <section>
+    <img class="imagen" src="img/jade1.jpg" alt="Jade Filio 1" />
+    <p class="frase">"Un día tan especial merece ser compartido con quienes más amo... ¡te espero en mi fiesta!"</p>
+
+    <img class="imagen" src="img/jade2.jpg" alt="Jade Filio 2" />
+    <p><strong>Fecha: 14 de noviembre 2025</strong></p>
+    <p><strong>Hora: 8:30 p.m.</strong></p>
+
+    <img class="imagen" src="img/jade3.jpg" alt="Jade Filio 3" />
+    <p><strong>Lugar: Salón JEMA</strong></p>
+    <p><strong>Dirección:</strong><br>
+       Calle Cuauhtémoc #66<br>
+       Colonia Pueblo de San Juan de Aragón<br>
+       C.P. 07950
+    </p>
+
+    <div class="countdown" id="countdown"></div>
+
+    <img class="imagen" src="img/jade4.jpg" alt="Jade Filio 4" />
+    <img class="imagen" src="img/dresscode.png" alt="Código de vestimenta" />
+    <img class="imagen" src="img/jade55.jpg" alt="Jade Filio 5" />
+  </section>
+
+  <section>
+    <h2>Ubicación</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.116091246781!2d-99.089!3d19.458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSalón%20JEMA!5e0!3m2!1ses!2smx!4v0000000000" 
+      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <img class="imagen" src="img/jade6.JPG" alt="Jade Filio 6" />
+  </section>
+
+  <section>
+    <h2>Confirma tu asistencia</h2>
+    <p>Esta invitación es válida para un boleto</p>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSccAc9Vz0SiJ2TPN2DbvIGFCz5ikNd4KWTtzUYIvG7v6CoP1g/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+  </section>
+
+  <footer>
+    © 2025 Mis XV LUNA D' JADE | Invitación digital creada con ❤️
+  </footer>
+
+  <script>
+    // Cuenta regresiva
+    const countdown = document.getElementById('countdown');
+    const eventDate = new Date('November 14, 2025 20:30:00').getTime();
+
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        countdown.innerHTML = "¡El gran día ha llegado!";
+      }
+    }, 1000);
+
+    // Control de música
+    function toggleMusic() {
+      const music = document.getElementById('bgMusic');
+      if (music.paused) { music.play(); } else { music.pause(); }
+    }
+  </script>
+</body>
+</html>
