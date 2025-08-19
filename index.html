@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mis XV LUNA D' JADE</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -18,22 +18,22 @@
       color: white;
       text-align: center;
       padding: 3rem 1rem;
+      font-family: 'Great Vibes', cursive;
     }
     header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin: 0;
     }
     header p {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       margin-top: 0.5rem;
     }
     section {
       padding: 2rem;
       text-align: center;
     }
-    .imagen-principal {
-      width: 100%;
+    .imagen {
+      width: 80%;
       max-width: 600px;
       margin: 2rem auto;
       border-radius: 1rem;
@@ -41,11 +41,12 @@
     }
     .frase {
       font-style: italic;
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      margin: 1rem 0;
     }
     .countdown {
-      font-size: 1.5rem;
+      font-size: 3rem;
       font-weight: bold;
       margin: 2rem 0;
     }
@@ -55,17 +56,6 @@
     .dresscode img {
       width: 150px;
       margin: 1rem;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 1rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
     footer {
       text-align: center;
@@ -91,10 +81,12 @@
   </header>
 
   <section>
-    <img class="imagen-principal" src="img/jade1.jpg" alt="Foto Jade Filio" />
+    <img class="imagen" src="img/jade1.jpg" alt="Jade Filio 1" />
     <p class="frase">"Un día tan especial merece ser compartido con quienes más amo... ¡te espero en mi fiesta!"</p>
+    <img class="imagen" src="img/jade2.jpg" alt="Jade Filio 2" />
     <p><strong>Fecha: 14 de noviembre 2025</strong></p>
     <p><strong>Hora: 8:30 p.m.</strong></p>
+    <img class="imagen" src="img/jade3.jpg" alt="Jade Filio 3" />
     <p><strong>Lugar: Salón JEMA</strong></p>
     <p><strong>Dirección:</strong><br>
        Calle Cuauhtémoc #66<br>
@@ -102,6 +94,7 @@
        C.P. 07950
     </p>
     <div class="countdown" id="countdown"></div>
+    <img class="imagen" src="img/jade4.jpg" alt="Jade Filio 4" />
   </section>
 
   <section class="dresscode">
@@ -109,18 +102,7 @@
     <p>Vestido largo para ellas y smoking para ellos</p>
     <img src="https://cdn-icons-png.flaticon.com/512/836/836685.png" alt="Vestido largo">
     <img src="https://cdn-icons-png.flaticon.com/512/836/836715.png" alt="Smoking">
-  </section>
-
-  <section>
-    <h2>Galería</h2>
-    <div class="gallery">
-      <img src="img/jade1.jpg" alt="Jade Filio 1">
-      <img src="img/jade2.jpg" alt="Jade Filio 2">
-      <img src="img/jade3.jpg" alt="Jade Filio 3">
-      <img src="img/jade4.jpg" alt="Jade Filio 4">
-      <img src="img/jade5.jpg" alt="Jade Filio 5">
-      <img src="img/jade6.jpg" alt="Jade Filio 6">
-    </div>
+    <img class="imagen" src="img/jade5.jpg" alt="Jade Filio 5" />
   </section>
 
   <section>
@@ -128,6 +110,7 @@
     <iframe 
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.116091246781!2d-99.089!3d19.458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSalón%20JEMA!5e0!3m2!1ses!2smx!4v0000000000" 
       width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <img class="imagen" src="img/jade6.jpg" alt="Jade Filio 6" />
   </section>
 
   <section>
@@ -141,7 +124,6 @@
   </footer>
 
   <script>
-    // Cuenta regresiva
     const countdown = document.getElementById('countdown');
     const eventDate = new Date('November 14, 2025 20:30:00').getTime();
 
@@ -164,4 +146,3 @@
   </script>
 </body>
 </html>
-
