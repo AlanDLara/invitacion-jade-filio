@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>XV Años de Jade Filio</title>
+  <title>Mis XV LUNA D' JADE</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background: #fff5f0;
+      background: #fff8dc; /* color oro suave */
       color: #4a3b39;
       animation: fadeIn 2s ease-in;
     }
     header {
-      background-color: #f8cbbd;
+      background-color: #d4af37; /* dorado */
       color: white;
       text-align: center;
       padding: 3rem 1rem;
@@ -44,27 +44,28 @@
       font-size: 1.5rem;
       margin-bottom: 2rem;
     }
-    form {
-      background-color: #fff;
-      padding: 2rem;
-      max-width: 500px;
-      margin: 2rem auto;
-      border-radius: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    input, textarea, button {
-      width: 100%;
-      padding: 0.8rem;
-      margin: 0.5rem 0;
-      border: 1px solid #ccc;
-      border-radius: 0.5rem;
-      font-family: inherit;
-    }
-    button {
-      background-color: #f8cbbd;
-      color: white;
+    .countdown {
+      font-size: 1.5rem;
       font-weight: bold;
-      cursor: pointer;
+      margin: 2rem 0;
+    }
+    .dresscode {
+      margin-top: 2rem;
+    }
+    .dresscode img {
+      width: 150px;
+      margin: 1rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
     footer {
       text-align: center;
@@ -80,33 +81,87 @@
 </head>
 <body>
   <audio autoplay loop>
-    <source src="https://cdn.pixabay.com/download/audio/2023/03/08/audio_dfaeb4e58f.mp3?filename=romantic-background-144246.mp3" type="audio/mpeg">
+    <source src="music/This Will Be.mp3" type="audio/mpeg">
     Tu navegador no soporta audio HTML5.
   </audio>
 
   <header>
-    <h1>Mis XV Años</h1>
+    <h1>Mis XV LUNA D' JADE</h1>
     <p>Jade Filio</p>
   </header>
 
   <section>
-    <img class="imagen-principal" src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Foto de quinceañera" />
+    <img class="imagen-principal" src="img/jade1.jpg" alt="Foto Jade Filio" />
     <p class="frase">"Un día tan especial merece ser compartido con quienes más amo... ¡te espero en mi fiesta!"</p>
-    <p><strong>Fecha, hora y lugar por definir</strong></p>
+    <p><strong>Fecha: 14 de noviembre 2025</strong></p>
+    <p><strong>Hora: 8:30 p.m.</strong></p>
+    <p><strong>Lugar: Salón JEMA</strong></p>
+    <p><strong>Dirección:</strong><br>
+       Calle Cuauhtémoc #66<br>
+       Colonia Pueblo de San Juan de Aragón<br>
+       C.P. 07950
+    </p>
+    <div class="countdown" id="countdown"></div>
+  </section>
+
+  <section class="dresscode">
+    <h2>Código de vestimenta: Formal</h2>
+    <p>Vestido largo para ellas y smoking para ellos</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/836/836685.png" alt="Vestido largo">
+    <img src="https://cdn-icons-png.flaticon.com/512/836/836715.png" alt="Smoking">
+  </section>
+
+  <section>
+    <h2>Galería</h2>
+    <div class="gallery">
+      <img src="img/jade1.jpg" alt="Jade Filio 1">
+      <img src="img/jade2.jpg" alt="Jade Filio 2">
+      <img src="img/jade3.jpg" alt="Jade Filio 3">
+      <img src="img/jade4.jpg" alt="Jade Filio 4">
+      <img src="img/jade5.jpg" alt="Jade Filio 5">
+      <img src="img/jade6.jpg" alt="Jade Filio 6">
+    </div>
+  </section>
+
+  <section>
+    <h2>Ubicación</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.116091246781!2d-99.089!3d19.458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSalón%20JEMA!5e0!3m2!1ses!2smx!4v0000000000" 
+      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </section>
 
   <section>
     <h2>Confirma tu asistencia</h2>
-    <form>
-      <input type="text" placeholder="Nombre completo" required />
-      <input type="email" placeholder="Correo electrónico" required />
-      <textarea placeholder="Mensaje (opcional)"></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+    <p>Esta invitación es válida para un boleto</p>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSccAc9Vz0SiJ2TPN2DbvIGFCz5ikNd4KWTtzUYIvG7v6CoP1g/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
   </section>
 
   <footer>
-    © 2025 XV Años Jade Filio | Invitación digital creada con ❤️
+    © 2025 Mis XV LUNA D' JADE | Invitación digital creada con ❤️
   </footer>
+
+  <script>
+    // Cuenta regresiva
+    const countdown = document.getElementById('countdown');
+    const eventDate = new Date('November 14, 2025 20:30:00').getTime();
+
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        countdown.innerHTML = "¡El gran día ha llegado!";
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
+
