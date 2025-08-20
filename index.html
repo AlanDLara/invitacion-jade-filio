@@ -1,141 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mis XV LUNA D' JADE</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Times New Roman', serif;
+      font-family: "Times New Roman", serif;
       font-style: italic;
-      /* Fondo ornamental tipo papel tapiz */
-      background: url("img/fondo.png") repeat;
+      background: url("img/fondo_textura.jpg");
+      background-size: cover;
       background-attachment: fixed;
-      color: #4a3b39;
-      animation: fadeIn 2s ease-in;
+      background-position: center;
+      color: white;
+      text-align: center;
     }
 
+    /* HEADER PARALLAX */
     header {
-      background-color: rgba(212, 175, 55, 0.9); /* dorado con ligera transparencia */
-      color: white;
-      text-align: center;
-      padding: 3rem 1rem;
-      font-family: 'Times New Roman', serif;
+      position: relative;
+      background: url("img/Jade_header.jpg") no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed; /* efecto parallax */
+      height: 250px;
+      border-bottom: 4px solid #d4af37;
+      overflow: hidden;
+    }
+
+    /* Overlay dorado difuminado */
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        rgba(212, 175, 55, 0.4),   /* dorado suave */
+        rgba(0, 0, 0, 0.4)         /* sombreado elegante */
+      );
+      mix-blend-mode: overlay;
+      pointer-events: none;
+    }
+
+    h1 {
+      font-family: "Times New Roman", serif;
       font-style: italic;
+      font-size: 3rem;
+      margin: 2rem 0;
     }
-    header h1 { font-size: 3.5rem; margin: 0; }
-    header p { font-size: 1.5rem; margin-top: 0.5rem; }
 
-    /* Cajas sobre el fondo para legibilidad */
-    section {
-      padding: 2rem;
-      text-align: center;
-      background-color: rgba(255, 248, 220, 0.85); /* marfil translúcido */
+    .countdown {
+      font-size: 2rem;
+      margin: 2rem 0;
+    }
+
+    img {
+      display: block;
       margin: 2rem auto;
-      border-radius: 1rem;
-      max-width: 900px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     }
 
-    .imagen {
-      width: 80%;
-      max-width: 600px;
+    iframe {
+      border-radius: 10px;
       margin: 2rem auto;
       display: block;
-      border-radius: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
-    .frase { font-size: 2rem; margin: 1rem 0; }
-    .countdown { font-size: 3rem; font-weight: bold; margin: 2rem 0; }
+    .map-container {
+      margin: 2rem auto;
+      max-width: 90%;
+    }
 
-    .music-control {
-      margin: 1rem auto 0;
+    audio {
+      margin: 2rem auto;
       display: block;
-      padding: 0.6rem 1.2rem;
-      font-size: 1rem;
-      background-color: #d4af37;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
-    .music-control:hover { filter: brightness(1.05); }
 
     footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #333;
-      background-color: rgba(255, 248, 220, 0.9);
-      margin: 2rem auto 0;
+      margin: 3rem 0;
+      font-size: 1rem;
+      color: #fff;
+      font-weight: bold;
     }
-
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
   </style>
 </head>
 <body>
-  <!-- Música de fondo con control -->
-  <audio id="bgMusic" autoplay loop>
+  <!-- HEADER PARALLAX CON DIFUMINADO -->
+  <header></header>
+
+  <!-- TÍTULO -->
+  <h1>Mis XV LUNA D' JADE</h1>
+  <p>14 de noviembre 2025 | Recepción 8:30 PM</p>
+  <p>Salón JEMA</p>
+  <p>Calle Cuauhtémoc #66, Col. Pueblo de San Juan de Aragón, C.P. 07950</p>
+
+  <!-- CONTADOR -->
+  <div class="countdown" id="countdown"></div>
+
+  <!-- IMÁGENES -->
+  <img src="img/jade1.jpg" alt="jade1">
+  <img src="img/jade2.jpg" alt="jade2">
+  <img src="img/jade3.jpg" alt="jade3">
+  <img src="img/jade4.jpg" alt="jade4">
+  <img src="img/dresscode.jpg" alt="dresscode">
+  <img src="img/jade5.jpg" alt="jade5">
+  <img src="img/jade6.jpg" alt="jade6">
+
+  <!-- MAPA -->
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.331868264993!2d-99.074!3d19.458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f9f81c40d6b3%3A0x6bdfbda29c!2sCalle%20Cuauht%C3%A9moc%2066%2C%20San%20Juan%20de%20Arag%C3%B3n%2C%20Ciudad%20de%20M%C3%A9xico!5e0!3m2!1ses-419!2smx!4v0000000000"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+  <!-- FORMULARIO -->
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSccAc9Vz0SiJ2TPN2DbvIGFCz5ikNd4KWTtzUYIvG7v6CoP1g/viewform?embedded=true"
+    width="640" height="553" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+
+  <!-- MÚSICA -->
+  <audio id="audio" controls autoplay loop>
     <source src="music/This Will Be.mp3" type="audio/mpeg">
-    Tu navegador no soporta audio HTML5.
+    Tu navegador no soporta audio.
   </audio>
-  <button class="music-control" onclick="toggleMusic()">Pausar/Reproducir música</button>
 
-  <header>
-    <h1>Mis XV LUNA D' JADE</h1>
-    <p>Jade Filio</p>
-  </header>
-
-  <section>
-    <img class="imagen" src="img/jade1.jpg" alt="Jade Filio 1" />
-    <p class="frase">"Un día tan especial merece ser compartido con quienes más amo... ¡te espero en mi fiesta!"</p>
-
-    <img class="imagen" src="img/jade2.jpg" alt="Jade Filio 2" />
-    <p><strong>Fecha: 14 de noviembre 2025</strong></p>
-    <p><strong>Hora: 8:30 p.m.</strong></p>
-
-    <img class="imagen" src="img/jade3.jpg" alt="Jade Filio 3" />
-    <p><strong>Lugar: Salón JEMA</strong></p>
-    <p><strong>Dirección:</strong><br>
-       Calle Cuauhtémoc #66<br>
-       Colonia Pueblo de San Juan de Aragón<br>
-       C.P. 07950
-    </p>
-
-    <div class="countdown" id="countdown"></div>
-
-    <img class="imagen" src="img/jade4.jpg" alt="Jade Filio 4" />
-    <img class="imagen" src="img/dresscode.png" alt="Código de vestimenta" />
-    <img class="imagen" src="img/jade55.jpg" alt="Jade Filio 5" />
-  </section>
-
-  <section>
-    <h2>Ubicación</h2>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.116091246781!2d-99.089!3d19.458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSalón%20JEMA!5e0!3m2!1ses!2smx!4v0000000000" 
-      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <img class="imagen" src="img/jade6.JPG" alt="Jade Filio 6" />
-  </section>
-
-  <section>
-    <h2>Confirma tu asistencia</h2>
-    <p>Esta invitación es válida para un boleto</p>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSccAc9Vz0SiJ2TPN2DbvIGFCz5ikNd4KWTtzUYIvG7v6CoP1g/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-  </section>
-
+  <!-- FOOTER -->
   <footer>
-    © 2025 Mis XV LUNA D' JADE | Invitación digital creada con ❤️
+    Invitación válida para un boleto
   </footer>
 
+  <!-- SCRIPT CONTADOR -->
   <script>
-    // Cuenta regresiva
-    const countdown = document.getElementById('countdown');
-    const eventDate = new Date('November 14, 2025 20:30:00').getTime();
+    const countdown = document.getElementById("countdown");
+    const eventDate = new Date("November 14, 2025 20:30:00").getTime();
 
-    const timer = setInterval(() => {
+    setInterval(() => {
       const now = new Date().getTime();
       const distance = eventDate - now;
 
@@ -145,19 +146,7 @@
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-      if (distance < 0) {
-        clearInterval(timer);
-        countdown.innerHTML = "¡El gran día ha llegado!";
-      }
     }, 1000);
-
-    // Control de música
-    function toggleMusic() {
-      const music = document.getElementById('bgMusic');
-      if (music.paused) { music.play(); } else { music.pause(); }
-    }
   </script>
 </body>
 </html>
-
