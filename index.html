@@ -37,8 +37,8 @@
       width: 100%;
       height: 100%;
       background: linear-gradient(
-        rgba(212, 175, 55, 0.4),   /* dorado suave */
-        rgba(0, 0, 0, 0.4)         /* sombreado elegante */
+        rgba(212, 175, 55, 0.4),
+        rgba(0, 0, 0, 0.4)
       );
       mix-blend-mode: overlay;
       pointer-events: none;
@@ -51,6 +51,41 @@
       margin: 2rem 0;
     }
 
+    /* ESTILO BARROCO PARA TODOS LOS H2 */
+    h2.ornamentado {
+      font-size: 2rem;
+      margin: 2rem auto;
+      font-weight: bold;
+      font-family: "Times New Roman", serif;
+      position: relative;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      color: #fff;
+      text-shadow: 0 0 8px rgba(212, 175, 55, 0.8),
+                   0 0 15px rgba(255, 255, 200, 0.6);
+    }
+
+    h2.ornamentado::before,
+    h2.ornamentado::after {
+      content: "❦";
+      position: absolute;
+      font-size: 1.8rem;
+      color: #d4af37;
+      text-shadow: 0 0 6px rgba(255,215,0,0.9);
+    }
+
+    h2.ornamentado::before {
+      left: -2rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    h2.ornamentado::after {
+      right: -2rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
     /* CONTADOR BARROCO */
     .countdown {
       font-size: 2rem;
@@ -60,8 +95,8 @@
       background: rgba(0, 0, 0, 0.5);
       color: #fff;
       font-weight: bold;
-      border: 4px double #d4af37; /* borde doble dorado */
-      border-radius: 50px; /* ovalado/barroco */
+      border: 4px double #d4af37;
+      border-radius: 50px;
       box-shadow: 0 0 15px rgba(212, 175, 55, 0.9),
                   0 0 30px rgba(255, 215, 0, 0.7),
                   inset 0 0 10px rgba(212, 175, 55, 0.5);
@@ -72,7 +107,6 @@
       position: relative;
     }
 
-    /* Filigranas barrocas arriba y abajo */
     .countdown::before,
     .countdown::after {
       content: "❦";
@@ -84,13 +118,8 @@
       transform: translateX(-50%);
     }
 
-    .countdown::before {
-      top: -1.5rem;
-    }
-
-    .countdown::after {
-      bottom: -1.5rem;
-    }
+    .countdown::before { top: -1.5rem; }
+    .countdown::after { bottom: -1.5rem; }
 
     img {
       display: block;
@@ -125,7 +154,6 @@
   </style>
 </head>
 <body>
-  <!-- HEADER PARALLAX CON DIFUMINADO -->
   <header></header>
 
   <!-- MÚSICA -->
@@ -140,9 +168,8 @@
   <img src="img/jade2.jpg" alt="jade2">
 
   <!-- CONTADOR -->
-  <h2>Tan solo faltan: </h2>
+  <h2 class="ornamentado">Tan solo faltan:</h2>
   <div class="countdown" id="countdown"></div>
-  <p> </p>
   
   <img src="img/jade3.jpg" alt="jade3">
   <img src="img/jade4.jpg" alt="jade4">
@@ -150,7 +177,7 @@
   <img src="img/jade55.jpg" alt="jade5">
   <img src="img/jade6.JPG" alt="jade6">
 
-  <h2>Te espero!! </h2>
+  <h2 class="ornamentado">Te espero!!</h2>
   <p>14 de noviembre 2025 | Recepción 8:30 PM</p>
   <p>Lugar: Salón JEMA</p>
   <p>Calle Cuauhtémoc #66, Col. Pueblo de San Juan de Aragón, C.P. 07950</p>
@@ -161,13 +188,12 @@
       width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </div>
   
-  <h2>Confirma tu asistencia</h2>
+  <h2 class="ornamentado">Confirma tu asistencia</h2>
   <!-- FORMULARIO -->
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSccAc9Vz0SiJ2TPN2DbvIGFCz5ikNd4KWTtzUYIvG7v6CoP1g/viewform?embedded=true"
     width="640" height="553" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
   <p>Invitación válida para un boleto</p>
   
-
   <!-- FOOTER -->
   <footer>
     © 2025 Mis XV LUNA D' JADE | Invitación digital creada con ❤️
