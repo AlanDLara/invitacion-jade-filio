@@ -51,9 +51,45 @@
       margin: 2rem 0;
     }
 
+    /* CONTADOR BARROCO */
     .countdown {
       font-size: 2rem;
-      margin: 2rem 0;
+      margin: 2rem auto;
+      padding: 1.5rem 2.5rem;
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-weight: bold;
+      border: 4px double #d4af37; /* borde doble dorado */
+      border-radius: 50px; /* ovalado/barroco */
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.9),
+                  0 0 30px rgba(255, 215, 0, 0.7),
+                  inset 0 0 10px rgba(212, 175, 55, 0.5);
+      text-shadow: 0 0 8px rgba(212, 175, 55, 0.8),
+                   0 0 15px rgba(255, 255, 200, 0.6);
+      letter-spacing: 2px;
+      font-family: "Times New Roman", serif;
+      position: relative;
+    }
+
+    /* Filigranas barrocas arriba y abajo */
+    .countdown::before,
+    .countdown::after {
+      content: "❦";
+      position: absolute;
+      font-size: 2rem;
+      color: #d4af37;
+      text-shadow: 0 0 6px rgba(255,215,0,0.9);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .countdown::before {
+      top: -1.5rem;
+    }
+
+    .countdown::after {
+      bottom: -1.5rem;
     }
 
     img {
@@ -92,9 +128,6 @@
   <!-- HEADER PARALLAX CON DIFUMINADO -->
   <header></header>
 
-  <!-- TÍTULO 
-  <h1>Mis XV LUNA D' JADE</h1>
-  -->
   <!-- MÚSICA -->
   <audio id="audio" controls autoplay loop>
     <source src="music/This Will Be.mp3" type="audio/mpeg">
@@ -106,7 +139,7 @@
   <p class="frase">"Un día tan especial merece ser compartido con quienes más amo... ¡te espero en mi fiesta!"</p>
   <img src="img/jade2.jpg" alt="jade2">
 
-    <!-- CONTADOR -->
+  <!-- CONTADOR -->
   <h2>Tan solo faltan: </h2>
   <div class="countdown" id="countdown"></div>
   <p> </p>
@@ -159,6 +192,3 @@
   </script>
 </body>
 </html>
-
-
-
