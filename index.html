@@ -110,7 +110,30 @@
       transform: scale(0.95);
       animation: fadeInScale 1.5s ease forwards;
     }
+    
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
 
+    .image-container img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .image-container h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 2rem;
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+      padding: 10px;
+      border-radius: 5px;
+    }
+    
     iframe {
       border-radius: 10px;
       margin: 2rem auto;
@@ -216,6 +239,12 @@
   </div>
   <h1>Regalos</h1>
   <br>
+  
+  <div class="image-container">
+    <img src="img/sobre2.png" alt="sobre2">
+    <h2>Texto sobre la imagen</h2>
+  </div>
+  
   <h2>Su presencia es lo más importante para mí, pero si desean obsequiarme algo pueden colocarlo en efectivo en un sobre y depositarlo en una cajita que se encontrará en la mesa de honor.</h2>
   <h2>Lluvia de sobres </h2>
   <img src="img/sobre2.png" alt="sobre">
@@ -256,6 +285,7 @@
   </script>
 </body>
 </html>
+
 
 
 
