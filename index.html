@@ -20,10 +20,11 @@
     /* HEADER PARALLAX */
     header {
       position: relative;
-      background: url("img/Jade_header.jpeg") no-repeat center center;
-      background-size: cover;
+      background: url("img/Jade_header.jpeg") no-repeat center top;
+      background-size: auto 100%; /* Ajuste: siempre se ve completa en el alto */
       background-attachment: fixed; /* efecto parallax */
-      height: 1850px;
+      background-color: #000; /* relleno elegante en los lados */
+      height: 100vh; /* ocupa toda la altura visible de la pantalla */
       border-bottom: 4px solid #d4af37;
       overflow: hidden;
     }
@@ -121,9 +122,6 @@
   <!-- HEADER PARALLAX CON DIFUMINADO -->
   <header></header>
 
-  <!-- TÍTULO -->
-  <!-- <h1>Mis XV LUNA D' JADE</h1> -->
-
   <!-- MÚSICA -->
   <audio id="audio" controls autoplay loop>
     <source src="music/This Will Be.mp3" type="audio/mpeg">
@@ -136,6 +134,7 @@
 
   <!-- CONTADOR -->
   <h1>Tan solo faltan: </h1>
+  <br>
   <div class="countdown" id="countdown"></div>
   <p> </p>
   
@@ -188,6 +187,3 @@
   </script>
 </body>
 </html>
-
-
-
